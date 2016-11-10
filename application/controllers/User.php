@@ -5,7 +5,7 @@ class User extends MY_Controller {
     public function signup() {
         $this->load->helper('form');
         if (!empty($this->input->post())) {
-
+            var_dump('ok');
         }
 
         $this->load->view('header');
