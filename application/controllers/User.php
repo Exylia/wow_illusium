@@ -87,6 +87,7 @@ class User extends MY_Controller
                         $data['error']['password'] = 'Mot de passe incorrect';
                     } else {
                         $this->session->set_userdata(array(
+                            'id'        => $user->id,
                             'username'  => $user->username,
                             'email'     => $user->email,
                             'is_logged' => 1,
