@@ -46,4 +46,12 @@ class User_model extends CI_Model
         return $this->db->get()->row();
     }
 
+    public function listUsers()
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+
+        return $this->db->get()->result();
+    }
+
 }

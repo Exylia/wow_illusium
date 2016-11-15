@@ -87,8 +87,10 @@ class User extends MY_Controller
                         $data['error']['password'] = 'Mot de passe incorrect';
                     } else {
                         $this->session->set_userdata(array(
-                            'username' => $user->username,
-                            'email'    => $user->email,
+                            'username'  => $user->username,
+                            'email'     => $user->email,
+                            'is_logged' => 1,
+                            'acl'       => explode('|', $user->acl),
                         ));
 
                         redirect('', 'refresh');

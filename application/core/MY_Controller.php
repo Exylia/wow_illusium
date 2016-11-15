@@ -9,3 +9,5 @@ class MY_Controller extends CI_Controller {
     }
 
 }
+
+require(APPPATH.'core/Admin_Controller.php');
