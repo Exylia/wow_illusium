@@ -1,5 +1,5 @@
 <div class="col-md-10">
-    <h2><?= $this->lang->line('page_title_add') ?></h2>
+    <h2><?= $this->lang->line('page_title_edit') ?></h2>
 
     <?php if (!empty($error)) : ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -67,11 +67,11 @@
 
         <div class="form-group">
             <div class="col-md-10 col-md-offset-2 text-right">
-                <a href="<?= site_url('admin/user') ?>" class="btn btn-default">
+                <a href="<?= site_url('admin/user/view/' . $values['id']) ?>" class="btn btn-default">
                     <span><?= $this->lang->line('return_user') ?></span>
                 </a>
 
-                <button type="submit" class="btn btn-primary"><?= $this->lang->line('create_user') ?></button>
+                <button type="submit" class="btn btn-primary"><?= $this->lang->line('update_user') ?></button>
             </div>
         </div>
     </form>

@@ -1,3 +1,4 @@
+            </div>
         </div>
 
         <nav class="navbar navbar-default navbar-fixed-bottom">

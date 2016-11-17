@@ -12,6 +12,19 @@ class User_model extends CI_Model
         return $this->db->insert('user');
     }
 
+    public function editUser($id, $username, $email, $password = null)
+    {
+        $this->db->set('username', $username);
+        $this->db->set('email', $email);
+
+        if ($password) {
+            $this->db->set('password', md5($password));
+        }
+
+        $this->db->where('id', $id);
+        $this->db->update('user');
+    }
+
     public function deleteUser($id)
     {
         $this->db->where('id', $id);
@@ -25,7 +38,7 @@ class User_model extends CI_Model
         $this->db->from('user');
         $this->db->where('id', $id);
 
-        return $this->db->get();
+        return $this->db->get()->row();
     }
 
     public function getUserByUsername($username)

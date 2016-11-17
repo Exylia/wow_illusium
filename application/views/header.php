@@ -29,3 +29,17 @@
         </nav>
 
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php
+                        var_dump($breadcrumb);
+                        if (!empty($breadcrumb)) {
+                            $this->load->view('breadcrumb', array('breadcrumb', $breadcrumb));
+                        } else {
+                            $this->load->view('breadcrumb');
+                        }
+                    ?>
+                </div>
+            </div>
+
+            <div class="row">
