@@ -1,5 +1,10 @@
 <?php
-$lang['page_title']       = 'Gestion des utilisateur';
+$lang['rubrique_admin_user']      = 'Gestion des utilisateurs';
+$lang['rubrique_admin_user_add']  = 'Ajouter un utilisateur';
+$lang['rubrique_admin_user_edit'] = 'Modifier un utilisateur';
+$lang['rubrique_admin_user_view'] = 'Consulter un utilisateur';
+
+$lang['page_title']       = 'Gestion des utilisateurs';
 $lang['page_title_add']   = $lang['page_title'] . ' - Ajouter un utilisateur';
 $lang['page_title_edit']  = $lang['page_title'] . ' - Modifier un utilisateur';
 
@@ -18,3 +23,6 @@ $lang['view_user']        = 'Voir l\'utilisateur';
 $lang['return_user']      = 'Retour';
 $lang['create_user']      = 'Créer l\'utilisateur';
 $lang['update_user']      = 'Mettre à jour l\'utilisateur';
+
+$lang['rubrique_login']   = 'Connexion';
+$lang['rubrique_signup']   = 'Inscription';

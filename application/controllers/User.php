@@ -8,12 +8,21 @@ class User extends MY_Controller
         parent::__construct();
         $this->load->helper('form');
         $this->load->model('User_model');
+        $this->lang->load('user', 'french');
     }
 
     public function signup()
     {
 
         $data = array();
+
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('user/signup'),
+                'label'  => $this->lang->line('rubrique_signup'),
+                'active' => 1,
+            ),
+        );
 
         $values = $this->input->post();
 
@@ -55,7 +64,7 @@ class User extends MY_Controller
             }
         }
 
-        $this->load->view('header');
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('user/signup', $data);
         $this->load->view('footer');
     }
@@ -63,6 +72,14 @@ class User extends MY_Controller
     public function login()
     {
         $data = array();
+
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('user/login'),
+                'label'  => $this->lang->line('rubrique_login'),
+                'active' => 1,
+            ),
+        );
 
         $values = $this->input->post();
 
@@ -100,7 +117,7 @@ class User extends MY_Controller
             }
         }
 
-        $this->load->view('header');
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('user/login', $data);
         $this->load->view('footer');
     }

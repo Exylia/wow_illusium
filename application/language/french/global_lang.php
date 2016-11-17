@@ -1,6 +1,7 @@
 <?php
 
 $lang['site_title'] = 'WOW PORTAIL';
+$lang['rubrique_admin'] = 'Administration';
 
 $lang['home'] = 'Accueil';
 

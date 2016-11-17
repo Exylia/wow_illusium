@@ -6,7 +6,6 @@ class User extends Admin_Controller
     {
         parent::__construct();
         $this->load->model('User_model');
-        $this->lang->load('global', 'french');
         $this->lang->load('user', 'french');
     }
 
@@ -14,18 +13,19 @@ class User extends Admin_Controller
     {
         $breadcrumb = array(
             array(
-                'url' => site_url('admin'),
-                'label' => $this->lang->line('rubrique_admin'),
+                'url'    => site_url('admin'),
+                'label'  => lang('rubrique_admin'),
             ),
             array(
-                'url' => site_url('admin/user'),
-                'label' => $this->lang->line('rubrique_admin_user'),
+                'url'    => site_url('admin/user'),
+                'label'  => lang('rubrique_admin_user'),
+                'active' => 1
             ),
         );
 
         $data['users'] = $this->User_model->listUsers();
 
-        $this->load->view('header', array('breadcrumb', $breadcrumb));
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('admin/menu_left');
         $this->load->view('admin/user/list_users', $data);
         $this->load->view('footer');
