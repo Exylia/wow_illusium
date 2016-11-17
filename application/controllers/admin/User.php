@@ -199,4 +199,13 @@ class User extends Admin_Controller
         $this->load->view('admin/user/view_user', $data);
         $this->load->view('footer');
     }
+
+    public function  delete($id)
+    {
+        if ($id !== $this->session->userdata('id')) {
+            $this->User_model->deleteUser($id);
+        }
+
+        redirect('admin/user', 'refresh');
+    }
 }
