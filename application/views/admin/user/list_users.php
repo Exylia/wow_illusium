@@ -46,7 +46,7 @@
 
                                 <td width="33%">
                                     <?php if ($this->session->userdata('id') != $user->id) : ?>
-                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('delete') ?>">
+                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" class="delete_user_confirm" data-toggle="tooltip" data-placement="top" title="<?= lang('delete') ?>">
                                             <span class="glyphicon glyphicon-remove"></span>
                                         </a>
                                     <?php else : ?>
@@ -61,3 +61,11 @@
         </tbody>
     </table>
 </div>
+
+<script>
+    $(function (){
+        $('.delete_user_confirm').click(function (){
+            return confirm ('<?= addslashes(lang('user_delete_confirm')) ?>');
+        });
+    });
+</script>

@@ -26,3 +26,5 @@ $lang['update_user']      = 'Mettre à jour l\'utilisateur';
 
 $lang['rubrique_login']   = 'Connexion';
 $lang['rubrique_signup']   = 'Inscription';
+
+$lang['user_delete_confirm'] = 'Êtes-vous sûr de vouloir supprimer l\'utilisateur ?';
