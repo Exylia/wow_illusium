@@ -19,7 +19,7 @@ class User extends MY_Controller
         $breadcrumb = array(
             array(
                 'url'    => site_url('user/signup'),
-                'label'  => $this->lang->line('rubrique_signup'),
+                'label'  => lang('rubrique_signup'),
                 'active' => 1,
             ),
         );
@@ -76,7 +76,7 @@ class User extends MY_Controller
         $breadcrumb = array(
             array(
                 'url'    => site_url('user/login'),
-                'label'  => $this->lang->line('rubrique_login'),
+                'label'  => lang('rubrique_login'),
                 'active' => 1,
             ),
         );

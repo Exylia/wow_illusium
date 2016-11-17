@@ -11,6 +11,8 @@ class User extends Admin_Controller
 
     public function listUsers()
     {
+        $data['users'] = $this->User_model->listUsers();
+
         $breadcrumb = array(
             array(
                 'url'    => site_url('admin'),
@@ -22,8 +24,6 @@ class User extends Admin_Controller
                 'active' => 1
             ),
         );
-
-        $data['users'] = $this->User_model->listUsers();
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('admin/menu_left');
@@ -75,7 +75,24 @@ class User extends Admin_Controller
             }
         }
 
-        $this->load->view('header');
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('admin'),
+                'label'  => lang('rubrique_admin'),
+            ),
+            array(
+                'url'    => site_url('admin/user'),
+                'label'  => lang('rubrique_admin_user'),
+            ),
+            array(
+                'url'    => site_url('admin/user/add'),
+                'label'  => lang('rubrique_admin_user_add'),
+                'active' => 1,
+            ),
+        );
+
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
+        $this->load->view('admin/menu_left');
         $this->load->view('admin/user/add_user', $data);
         $this->load->view('footer');
     }
@@ -120,13 +137,30 @@ class User extends Admin_Controller
             if (empty($data['error'])) {
                 $this->User_model->editUser($id, $values['username'], $values['email'], $values['password']);
 
-                redirect('admin/user/edit/' . $id, 'refresh');
+                redirect('admin/user/view/' . $id, 'refresh');
             }
         }
 
         $data['values'] = array_merge($user, $values);
 
-        $this->load->view('header');
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('admin'),
+                'label'  => lang('rubrique_admin'),
+            ),
+            array(
+                'url'    => site_url('admin/user'),
+                'label'  => lang('rubrique_admin_user'),
+            ),
+            array(
+                'url'    => site_url('admin/user/edit'),
+                'label'  => lang('rubrique_admin_user_edit'),
+                'active' => 1,
+            ),
+        );
+
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
+        $this->load->view('admin/menu_left');
         $this->load->view('admin/user/edit_user', $data);
         $this->load->view('footer');
     }
@@ -142,9 +176,26 @@ class User extends Admin_Controller
             exit;
         }
 
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('admin'),
+                'label'  => lang('rubrique_admin'),
+            ),
+            array(
+                'url'    => site_url('admin/user'),
+                'label'  => lang('rubrique_admin_user'),
+            ),
+            array(
+                'url'    => site_url('admin/user/view'),
+                'label'  => lang('rubrique_admin_user_view'),
+                'active' => 1,
+            ),
+        );
+
         $data['values'] = $user;
 
-        $this->load->view('header');
+        $this->load->view('header', array('breadcrumb' => $breadcrumb));
+        $this->load->view('admin/menu_left');
         $this->load->view('admin/user/view_user', $data);
         $this->load->view('footer');
     }

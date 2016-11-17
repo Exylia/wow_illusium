@@ -1,5 +1,5 @@
-<div class="col-md-10">
-    <h2><?= $this->lang->line('page_title_edit') ?></h2>
+<div class="col-md-9">
+    <h2><?= lang('page_title_edit') ?></h2>
 
     <?php if (!empty($error)) : ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -16,7 +16,7 @@
 
     <form action="" class="form-horizontal" method="POST">
         <div class="form-group <?php echo (!empty($error['username']) ? 'has-error' : '') ?>">
-            <label for="username" class="col-md-2 control-label"><?= $this->lang->line('username') ?></label>
+            <label for="username" class="col-md-2 control-label"><?= lang('username') ?></label>
             <div class="col-md-10">
                 <input
                     name="username"
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['email']) ? 'has-error' : '') ?>">
-            <label  for="email" class="col-md-2 control-label"><?= $this->lang->line('email') ?></label>
+            <label  for="email" class="col-md-2 control-label"><?= lang('email') ?></label>
             <div class="col-md-10">
                 <input
                     name="email"
@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['password']) ? 'has-error' : '') ?>">
-            <label for="password" class="col-md-2 control-label"><?= $this->lang->line('password') ?></label>
+            <label for="password" class="col-md-2 control-label"><?= lang('password') ?></label>
             <div class="col-md-10">
                 <input
                     name="password"
@@ -54,7 +54,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['password_confirm']) ? 'has-error' : '') ?>">
-            <label for="password_confirm" class="col-md-2 control-label"><?= $this->lang->line('password_confirm') ?></label>
+            <label for="password_confirm" class="col-md-2 control-label"><?= lang('password_confirm') ?></label>
             <div class="col-md-10">
                 <input
                     name="password_confirm"
@@ -68,10 +68,10 @@
         <div class="form-group">
             <div class="col-md-10 col-md-offset-2 text-right">
                 <a href="<?= site_url('admin/user/view/' . $values['id']) ?>" class="btn btn-default">
-                    <span><?= $this->lang->line('return_user') ?></span>
+                    <span><?= lang('return_user') ?></span>
                 </a>
 
-                <button type="submit" class="btn btn-primary"><?= $this->lang->line('update_user') ?></button>
+                <button type="submit" class="btn btn-primary"><?= lang('update_user') ?></button>
             </div>
         </div>
     </form>

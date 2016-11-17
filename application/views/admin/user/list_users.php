@@ -1,20 +1,20 @@
 <div class="col-md-9">
-    <h2><?= $this->lang->line('page_title') ?></h2>
+    <h2><?= lang('page_title') ?></h2>
 
     <div class="pull-right">
         <a class="btn btn-default" href="<?= site_url('admin/user/add') ?>">
-            <span><?= $this->lang->line('add_user') ?></span>
+            <span><?= lang('add_user') ?></span>
         </a>
     </div>
 
     <table class="table table-hover table-characters">
         <thead>
             <tr>
-                <th class="col-md-4"><?= $this->lang->line('username') ?></th>
+                <th class="col-md-4"><?= lang('username') ?></th>
 
-                <th class="col-md-4"><?= $this->lang->line('email') ?></th>
+                <th class="col-md-4"><?= lang('email') ?></th>
 
-                <th class="col-md-2"><?= $this->lang->line('acl') ?></th>
+                <th class="col-md-2"><?= lang('acl') ?></th>
 
                 <th class="col-md-2">&nbsp;</th>
             </tr>
@@ -33,20 +33,20 @@
                         <table>
                             <tr>
                                 <td width="33%">
-                                    <a href="<?= site_url('admin/user/view/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= $this->lang->line('view') ?>">
+                                    <a href="<?= site_url('admin/user/view/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('view') ?>">
                                         <span class="glyphicon glyphicon-search"></span>
                                     </a>
                                 </td>
 
                                 <td width="33%">
-                                    <a href="<?= site_url('admin/user/edit/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= $this->lang->line('edit') ?>">
+                                    <a href="<?= site_url('admin/user/edit/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('edit') ?>">
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </a>
                                 </td>
 
                                 <td width="33%">
                                     <?php if ($this->session->userdata('id') != $user->id) : ?>
-                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= $this->lang->line('delete') ?>">
+                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('delete') ?>">
                                             <span class="glyphicon glyphicon-remove"></span>
                                         </a>
                                     <?php else : ?>
