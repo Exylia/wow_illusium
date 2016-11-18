@@ -1,5 +1,5 @@
 <div class="col-md-9">
-    <h2><?= lang('page_title_add') ?></h2>
+    <h2><?= lang('rubrique_admin_user') . ' - ' . lang('rubrique_admin_user_add') ?></h2>
 
     <?php if (!empty($error)) : ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
@@ -16,7 +16,7 @@
 
     <form action="" class="form-horizontal" method="POST">
         <div class="form-group <?php echo (!empty($error['username']) ? 'has-error' : '') ?>">
-            <label for="username" class="col-md-2 control-label"><?= lang('username') ?></label>
+            <label for="username" class="col-md-2 control-label"><?= lang('user_username') ?></label>
             <div class="col-md-10">
                 <input
                     name="username"
@@ -29,7 +29,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['email']) ? 'has-error' : '') ?>">
-            <label  for="email" class="col-md-2 control-label"><?= lang('email') ?></label>
+            <label  for="email" class="col-md-2 control-label"><?= lang('user_email') ?></label>
             <div class="col-md-10">
                 <input
                     name="email"
@@ -42,7 +42,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['password']) ? 'has-error' : '') ?>">
-            <label for="password" class="col-md-2 control-label"><?= lang('password') ?></label>
+            <label for="password" class="col-md-2 control-label"><?= lang('user_password') ?></label>
             <div class="col-md-10">
                 <input
                     name="password"
@@ -54,7 +54,7 @@
         </div>
 
         <div class="form-group <?php echo (!empty($error['password_confirm']) ? 'has-error' : '') ?>">
-            <label for="password_confirm" class="col-md-2 control-label"><?= lang('password_confirm') ?></label>
+            <label for="password_confirm" class="col-md-2 control-label"><?= lang('user_password_confirm') ?></label>
             <div class="col-md-10">
                 <input
                     name="password_confirm"

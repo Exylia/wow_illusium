@@ -1,21 +1,23 @@
 <div class="col-md-9">
+    <h2><?= lang('rubrique_admin_user') . ' - ' . lang('rubrique_admin_user_view') ?></h2>
+
     <form action="" class="form-horizontal" method="POST">
         <div class="form-group">
-            <label for="username" class="col-md-2 control-label"><?= lang('username') ?></label>
+            <label for="username" class="col-md-2 control-label"><?= lang('user_username') ?></label>
             <div class="col-md-10">
                 <p class="form-control-static"><?= !empty($values['username']) ? $values['username'] : ' - ' ?></p>
             </div>
         </div>
 
         <div class="form-group">
-            <label  for="email" class="col-md-2 control-label"><?= lang('email') ?></label>
+            <label  for="email" class="col-md-2 control-label"><?= lang('user_email') ?></label>
             <div class="col-md-10">
                 <p class="form-control-static"><?= !empty($values['email']) ? $values['email'] : ' - ' ?></p>
             </div>
         </div>
 
         <div class="form-group">
-            <label  for="email" class="col-md-2 control-label"><?= lang('acl') ?></label>
+            <label  for="email" class="col-md-2 control-label"><?= lang('user_acl') ?></label>
             <div class="col-md-10">
                 <p class="form-control-static"><?= !empty($values['acl']) ? $values['acl'] : ' - ' ?></p>
             </div>

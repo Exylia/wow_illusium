@@ -13,16 +13,7 @@ class User extends MY_Controller
 
     public function signup()
     {
-
         $data = array();
-
-        $breadcrumb = array(
-            array(
-                'url'    => site_url('user/signup'),
-                'label'  => lang('rubrique_signup'),
-                'active' => 1,
-            ),
-        );
 
         $values = $this->input->post();
 
@@ -64,6 +55,14 @@ class User extends MY_Controller
             }
         }
 
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('user/signup'),
+                'label'  => lang('rubrique_signup'),
+                'active' => 1,
+            ),
+        );
+
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('user/signup', $data);
         $this->load->view('footer');
@@ -72,14 +71,6 @@ class User extends MY_Controller
     public function login()
     {
         $data = array();
-
-        $breadcrumb = array(
-            array(
-                'url'    => site_url('user/login'),
-                'label'  => lang('rubrique_login'),
-                'active' => 1,
-            ),
-        );
 
         $values = $this->input->post();
 
@@ -116,6 +107,14 @@ class User extends MY_Controller
                 }
             }
         }
+
+        $breadcrumb = array(
+            array(
+                'url'    => site_url('user/login'),
+                'label'  => lang('rubrique_login'),
+                'active' => 1,
+            ),
+        );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('user/login', $data);

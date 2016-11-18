@@ -1,5 +1,5 @@
 <div class="col-md-9">
-    <h2><?= lang('page_title') ?></h2>
+    <h2><?= lang('rubrique_admin_user') . ' - ' . lang('rubrique_admin_user') ?></h2>
 
     <div class="pull-right">
         <a class="btn btn-default" href="<?= site_url('admin/user/add') ?>">
@@ -10,11 +10,11 @@
     <table class="table table-hover table-characters">
         <thead>
             <tr>
-                <th class="col-md-4"><?= lang('username') ?></th>
+                <th class="col-md-4"><?= lang('user_username') ?></th>
 
-                <th class="col-md-4"><?= lang('email') ?></th>
+                <th class="col-md-4"><?= lang('user_email') ?></th>
 
-                <th class="col-md-2"><?= lang('acl') ?></th>
+                <th class="col-md-2"><?= lang('user_acl') ?></th>
 
                 <th class="col-md-2">&nbsp;</th>
             </tr>

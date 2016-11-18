@@ -1,19 +1,18 @@
 <?php
-$lang['rubrique_admin_user']      = 'Gestion des utilisateurs';
+
+// Titre des pages admin user
 $lang['rubrique_admin_user_add']  = 'Ajouter un utilisateur';
 $lang['rubrique_admin_user_edit'] = 'Modifier un utilisateur';
 $lang['rubrique_admin_user_view'] = 'Consulter un utilisateur';
 
-$lang['page_title']       = 'Gestion des utilisateurs';
-$lang['page_title_add']   = $lang['page_title'] . ' - Ajouter un utilisateur';
-$lang['page_title_edit']  = $lang['page_title'] . ' - Modifier un utilisateur';
-
 // Label formulaire / liste
-$lang['username']         = 'Nom d\'utilisateur';
-$lang['email']            = 'Adresse mail';
-$lang['acl']              = 'Rôle(s)';
-$lang['password']         = 'Mot de passe';
-$lang['password_confirm'] = 'Confirmez le mot de passe';
+$lang['user_username']         = 'Nom d\'utilisateur';
+$lang['user_email']            = 'Adresse mail';
+$lang['user_acl']              = 'Rôle(s)';
+$lang['user_password']         = 'Mot de passe';
+$lang['user_password_confirm'] = 'Confirmation du mot de passe';
+$lang['user_login']            = 'Connexion';
+$lang['user_signup']           = 'Inscription';
 
 // Action sur les utilisateurs
 $lang['add_user']         = 'Ajouter un utilisateur';
@@ -24,7 +23,6 @@ $lang['return_user']      = 'Retour';
 $lang['create_user']      = 'Créer l\'utilisateur';
 $lang['update_user']      = 'Mettre à jour l\'utilisateur';
 
-$lang['rubrique_login']   = 'Connexion';
-$lang['rubrique_signup']   = 'Inscription';
+
 
 $lang['user_delete_confirm'] = 'Êtes-vous sûr de vouloir supprimer l\'utilisateur ?';
