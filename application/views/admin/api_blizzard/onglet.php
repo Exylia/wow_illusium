@@ -1,6 +1,13 @@
-<div class="col-md-9">
-    <ul class="nav nav-tabs">
-      <li role="presentation" class="active"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">Profile</a></li>
-      <li role="presentation"><a href="#">Messages</a></li>
-    </ul>
+<ul class="nav nav-tabs">
+    <li role="presentation" <?= ((!empty($page) && $page === 'general') ? 'class="active"' : '') ?>>
+        <a href="<?= site_url('admin/api_blizzard') ?>"><?= lang('onglet_general') ?></a>
+    </li>
+
+    <li role="presentation" <?= ((!empty($page) && $page === 'raid') ? 'class="active"' : '') ?>>
+        <a href="<?= site_url('admin/api_blizzard/raid') ?>"><?= lang('onglet_raid') ?></a>
+    </li>
+
+    <li role="presentation" <?= ((!empty($page) && $page === 'traduction') ? 'class="active"' : '') ?>>
+        <a href="<?= site_url('admin/api_blizzard/traduction') ?>"><?= lang('onglet_traduction') ?></a>
+    </li>
+</ul>

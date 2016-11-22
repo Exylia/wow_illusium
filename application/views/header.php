@@ -11,20 +11,17 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
             <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="<?php echo site_url() ?>"> WoW_API </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <?php
-                        if ($this->session->userdata('is_logged') == 1) {
-                            $this->load->view('menu_logged');
-                        } else {
-                            $this->load->view('menu_guest');
-                        }
-                    ?>
-                </div>
+                <a class="navbar-brand" href="<?php echo site_url() ?>"> WoW_API </a>
+
+                <?php
+                    if ($this->session->userdata('is_logged') == 1) {
+                        $this->load->view('menu_logged');
+                    } else {
+                        $this->load->view('menu_guest');
+                    }
+                ?>
             </div>
         </nav>
 
