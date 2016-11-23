@@ -26,7 +26,7 @@ class User extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_user'));
         $this->load->view('admin/user/list_users', $data);
         $this->load->view('footer');
     }
@@ -92,7 +92,7 @@ class User extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_user'));
         $this->load->view('admin/user/add_user', $data);
         $this->load->view('footer');
     }
@@ -160,7 +160,7 @@ class User extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_user'));
         $this->load->view('admin/user/edit_user', $data);
         $this->load->view('footer');
     }
@@ -195,7 +195,7 @@ class User extends Admin_Controller
         $data['values'] = $user;
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_user'));
         $this->load->view('admin/user/view_user', $data);
         $this->load->view('footer');
     }

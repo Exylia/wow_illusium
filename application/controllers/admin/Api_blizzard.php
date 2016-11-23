@@ -26,7 +26,7 @@ class Api_blizzard extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_api_blizzard'));
         $this->load->view('admin/api_blizzard/index', $data);
         $this->load->view('footer');
     }
@@ -49,7 +49,7 @@ class Api_blizzard extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_api_blizzard'));
         $this->load->view('admin/api_blizzard/index', $data);
         $this->load->view('footer');
     }
@@ -72,7 +72,7 @@ class Api_blizzard extends Admin_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_api_blizzard'));
         $this->load->view('admin/api_blizzard/index', $data);
         $this->load->view('footer');
     }

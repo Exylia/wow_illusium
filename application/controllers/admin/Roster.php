@@ -27,7 +27,7 @@ class Roster extends ADMIN_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_roster'));
         $this->load->view('admin/roster/list_rosters', $data);
         $this->load->view('footer');
     }
@@ -69,7 +69,7 @@ class Roster extends ADMIN_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_roster'));
         $this->load->view('admin/roster/add_roster', $data);
         $this->load->view('footer');
     }
@@ -114,7 +114,7 @@ class Roster extends ADMIN_Controller
         );
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_roster'));
         $this->load->view('admin/roster/edit_roster', $data);
         $this->load->view('footer');
     }
@@ -151,7 +151,7 @@ class Roster extends ADMIN_Controller
         $data['values'] = $roster;
 
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
-        $this->load->view('admin/menu_left');
+        $this->load->view('admin/menu_left', array('rubrique' => 'admin_roster'));
         $this->load->view('admin/roster/view_roster', $data);
         $this->load->view('footer');
     }

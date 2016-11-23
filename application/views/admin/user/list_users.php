@@ -1,22 +1,14 @@
 <div class="col-md-9">
-    <h2><?= lang('rubrique_admin_user') . ' - ' . lang('rubrique_admin_user') ?></h2>
-
-    <div class="pull-right">
-        <a class="btn btn-default" href="<?= site_url('admin/user/add') ?>">
-            <span><?= lang('add_user') ?></span>
-        </a>
-    </div>
-
-    <table class="table table-hover table-characters">
+    <table class="table">
         <thead>
             <tr>
-                <th class="col-md-4"><?= lang('user_username') ?></th>
+                <th><?= lang('user_username') ?></th>
 
-                <th class="col-md-4"><?= lang('user_email') ?></th>
+                <th><?= lang('user_email') ?></th>
 
-                <th class="col-md-2"><?= lang('user_acl') ?></th>
+                <th><?= lang('user_acl') ?></th>
 
-                <th class="col-md-2">&nbsp;</th>
+                <th>&nbsp;</th>
             </tr>
         </thead>
 
@@ -29,37 +21,43 @@
 
                     <td><?= str_replace('|', ' | ', $user->acl) ?></td>
 
-                    <td class="list-action">
-                        <table>
-                            <tr>
-                                <td width="33%">
-                                    <a href="<?= site_url('admin/user/view/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('view') ?>">
-                                        <span class="glyphicon glyphicon-search"></span>
-                                    </a>
-                                </td>
+                    <td width="165px">
+                        <div class="text-xs-center">
+                            <div class="col-xs-4">
+                                <a href="<?= site_url('admin/user/view/' . $user->id) ?>" title="<?= lang('view') ?>">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </a>
+                            </div>
 
-                                <td width="33%">
-                                    <a href="<?= site_url('admin/user/edit/' . $user->id) ?>" data-toggle="tooltip" data-placement="top" title="<?= lang('edit') ?>">
-                                        <span class="glyphicon glyphicon-pencil"></span>
+                                <div class="col-xs-4">
+                                    <a href="<?= site_url('admin/user/edit/' . $user->id) ?>"  title="<?= lang('edit') ?>">
+                                        <li class="fa fa-pencil" aria-hidden="true"></li>
                                     </a>
-                                </td>
+                                </div>
 
-                                <td width="33%">
+                                <div class="col-xs-4">
                                     <?php if ($this->session->userdata('id') != $user->id) : ?>
-                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" class="delete_user_confirm" data-toggle="tooltip" data-placement="top" title="<?= lang('delete') ?>">
-                                            <span class="glyphicon glyphicon-remove"></span>
+                                        <a href="<?= site_url('admin/user/delete/' . $user->id) ?>" class="delete_user_confirm"  title="<?= lang('delete') ?>">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+
                                         </a>
                                     <?php else : ?>
                                         <span>&nbsp;</span>
                                     <?php endif; ?>
-                                </td>
+                                </div>
                             </tr>
-                        </table>
+                        </div>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+    <div class="float-lg-right">
+        <a class="btn btn-primary" href="<?= site_url('admin/user/add') ?>">
+            <span><?= lang('add_user') ?></span>
+        </a>
+    </div>
 </div>
 
 <script>

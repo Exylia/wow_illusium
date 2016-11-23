@@ -7,3 +7,9 @@ body {
     width: 100%;
     text-align: center;
 }
+
+
+/* overwrite bootstrap */
+.table > thead > tr > th {
+    border-top: none;
+}

@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="<?= base_url() . 'css/bootstrap.min.css' ?>" type="text/css">
+        <link rel="stylesheet" href="<?= base_url() . 'css/font-awesome.min.css' ?>" type="text/css">
         <link rel="stylesheet" href="<?= base_url() . 'css/global.css' ?>" type="text/css">
         <script src="<?= base_url() . 'js/jquery-3.1.1.min.js' ?>"></script>
         <script src="<?= base_url() . 'js/bootstrap.min.js' ?>"></script>

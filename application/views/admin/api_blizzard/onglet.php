@@ -1,13 +1,13 @@
 <ul class="nav nav-tabs">
-    <li role="presentation" <?= ((!empty($page) && $page === 'general') ? 'class="active"' : '') ?>>
-        <a href="<?= site_url('admin/api_blizzard') ?>"><?= lang('onglet_general') ?></a>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link <?= ((!empty($page) && $page === 'general') ? 'active' : '') ?>" href="<?= site_url('admin/api_blizzard') ?>"><?= lang('onglet_general') ?></a>
     </li>
 
-    <li role="presentation" <?= ((!empty($page) && $page === 'raid') ? 'class="active"' : '') ?>>
-        <a href="<?= site_url('admin/api_blizzard/raid') ?>"><?= lang('onglet_raid') ?></a>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link <?= ((!empty($page) && $page === 'raid') ? 'active' : '') ?>" href="<?= site_url('admin/api_blizzard/raid') ?>"><?= lang('onglet_raid') ?></a>
     </li>
 
-    <li role="presentation" <?= ((!empty($page) && $page === 'traduction') ? 'class="active"' : '') ?>>
-        <a href="<?= site_url('admin/api_blizzard/traduction') ?>"><?= lang('onglet_traduction') ?></a>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link <?= ((!empty($page) && $page === 'traduction') ? 'active' : '') ?>" href="<?= site_url('admin/api_blizzard/traduction') ?>"><?= lang('onglet_traduction') ?></a>
     </li>
 </ul>

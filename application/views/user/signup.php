@@ -1,4 +1,4 @@
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-8 offset-md-2">
     <?php if (!empty($error)) : ?>
         <div class="alert alert-danger alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -12,10 +12,10 @@
         </div>
     <?php endif;?>
 
-    <form action="" class="form-horizontal" method="POST">
-        <div class="form-group <?php echo (!empty($error['username']) ? 'has-error' : '') ?>">
-            <label for="username" class="col-md-2 control-label"><?= lang('user_username') ?></label>
-            <div class="col-md-10">
+    <form action="" method="POST">
+        <div class="form-group row <?php echo (!empty($error['username']) ? 'has-error' : '') ?>">
+            <label for="username" class="col-md-4 col-form-label"><?= lang('user_username') ?></label>
+            <div class="col-md-8">
                 <input
                     name="username"
                     type="text"
@@ -25,9 +25,9 @@
             </div>
         </div>
 
-        <div class="form-group <?php echo (!empty($error['email']) ? 'has-error' : '') ?>">
-            <label  for="email" class="col-md-2 control-label"><?= lang('user_email') ?></label>
-            <div class="col-md-10">
+        <div class="form-group row <?php echo (!empty($error['email']) ? 'has-error' : '') ?>">
+            <label  for="email" class="col-md-4 col-form-label"><?= lang('user_email') ?></label>
+            <div class="col-md-8">
                 <input
                     name="email"
                     type="email"
@@ -37,9 +37,9 @@
             </div>
         </div>
 
-        <div class="form-group <?php echo (!empty($error['password']) ? 'has-error' : '') ?>">
-            <label for="password" class="col-md-2 control-label"><?= lang('user_password') ?></label>
-            <div class="col-md-10">
+        <div class="form-group row <?php echo (!empty($error['password']) ? 'has-error' : '') ?>">
+            <label for="password" class="col-md-4 col-form-label"><?= lang('user_password') ?></label>
+            <div class="col-md-8">
                 <input
                     name="password"
                     type="password"
@@ -49,9 +49,9 @@
             </div>
         </div>
 
-        <div class="form-group <?php echo (!empty($error['password_confirm']) ? 'has-error' : '') ?>">
-            <label for="password_confirm" class="col-md-2 control-label"><?= lang('user_password_confirm') ?></label>
-            <div class="col-md-10">
+        <div class="form-group row <?php echo (!empty($error['password_confirm']) ? 'has-error' : '') ?>">
+            <label for="password_confirm" class="col-md-4 col-form-label"><?= lang('user_password_confirm') ?></label>
+            <div class="col-md-8">
                 <input
                     name="password_confirm"
                     type="password"
@@ -61,8 +61,8 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-10 col-md-offset-2">
+        <div class="form-group row">
+            <div class="col-md-8 offset-md-4">
                 <button type="submit" class="btn btn-primary btn-block"><?= lang('user_signup') ?></button>
             </div>
         </div>
