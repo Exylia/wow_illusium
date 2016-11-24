@@ -48,6 +48,15 @@ class Api_blizzard extends Admin_Controller
             ),
         );
 
+        $curl_params = array(
+            'method' => 'GET',
+            'url'    => 'https://eu.api.battle.net/wow/character/uldaman/ghiblik?fields=achievements&local=fr_FR&apikey=gf5ynqfqhzzrsmjr556c5t8nmf7fvrp5',
+        );
+
+        $this->load->library('curl', $curl_params);
+
+        var_dump($this->curl->send());
+
         $this->load->view('header', array('breadcrumb' => $breadcrumb));
         $this->load->view('admin/menu_left', array('rubrique' => 'admin_api_blizzard'));
         $this->load->view('admin/api_blizzard/index', $data);
@@ -75,5 +84,18 @@ class Api_blizzard extends Admin_Controller
         $this->load->view('admin/menu_left', array('rubrique' => 'admin_api_blizzard'));
         $this->load->view('admin/api_blizzard/index', $data);
         $this->load->view('footer');
+    }
+
+    public function ajax($action) {
+        switch ($action) {
+            case 'update_class':
+                break;
+
+            case 'update_race':
+                break;
+
+            case 'update_raid':
+                break;
+        }
     }
 }
