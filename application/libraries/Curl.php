@@ -17,15 +17,14 @@ class Curl {
             $this->setURL($params['url']);
         }
 
-        var_dump($this->url);
-        var_dump($this->method);
+        return $this;
     }
 
     public function setURL($url)
     {
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             log_message('error', 'Curl library - setUrl : param must be a valid URL');
-
+                var_dump('ok');
             return $this;
         }
 
@@ -49,21 +48,21 @@ class Curl {
 
     public function send()
     {
-        if (empty($method) || empty($url)) {
+        if (empty($this->method) || empty($this->url)) {
             log_message('error', 'Curl library - Send : URL, method and SSL must be defined');
             return false;
         }
 
         $curl = curl_init();
 
-        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_URL, $this->url);
         curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
         curl_setopt($curl, CURLOPT_HEADER, 1);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
-        switch($method) {
+        switch($this->method) {
             case 'GET':
                 break;
             case 'POST':
@@ -82,9 +81,8 @@ class Curl {
                 break;
         }
 
-        $response = curl_exec($curl);
 
-        return $response;
+        $response    = curl_exec($curl);
 
         $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
         $code        = curl_getinfo($curl, CURLINFO_HTTP_CODE);
@@ -99,5 +97,29 @@ class Curl {
             'code' => $code,
         );
     }
+}
 
+/**
+ * [curl_header_to_array description]
+ * @param  [type] $header [description]
+ * @return [type]         [description]
+ */
+function curl_header_to_array($header)
+{
+    $headers_array = array();
+
+    foreach (explode("\r\n", $header) as $i=> $line) {
+
+        if (empty($line))
+            continue;
+
+        if ($i === 0) {
+            $headers_array['http_code'] = $line;
+        } else {
+            list($key, $value) =explode(': ', $line);
+            $headers_array[$key] = $value;
+        }
+    }
+
+    return $headers_array;
 }
