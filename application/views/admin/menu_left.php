@@ -6,6 +6,10 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link <?= ((!empty($rubrique) && $rubrique === 'admin_event') ? 'active' : '') ?>" href="<?= site_url('admin/event') ?>"><?= lang('rubrique_admin_event') ?></a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link <?= ((!empty($rubrique) && $rubrique === 'admin_roster') ? 'active' : '') ?>" href="<?= site_url('admin/roster') ?>"><?= lang('rubrique_admin_roster') ?></a>
             </li>
 

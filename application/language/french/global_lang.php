@@ -10,6 +10,7 @@ $lang['rubrique_logout'] = 'Deconnexion';
 $lang['home']                  = 'Accueil';
 $lang['rubrique_admin']        = 'Administration';
 $lang['rubrique_admin_user']   = 'Gestion des Utilisateurs';
+$lang['rubrique_admin_event']  = 'Gestion des Evenement';
 $lang['rubrique_admin_roster'] = 'Gestion des Rosters';
 $lang['rubrique_admin_api_blizzard'] = 'Gestion des API Blizzard';
 
